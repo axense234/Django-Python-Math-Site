@@ -1,0 +1,35 @@
+{% extends 'mainsite/base.html' %}
+{% block title %}
+Calculator
+{% endblock %}
+
+
+{% block content %}
+<h1><p class="text-center">Calculator</p></h1>
+<p class="ex2">A calculator that is supposed to work but isnt because django is bullshit.</p>
+<h1>Addition:</h1>
+<form method='post', action="/results/">
+  {% csrf_token %}
+  {{form11}}
+  <button type="submit", name="save1", class="btn btn-success">Calculate!</button>
+</form>
+<h1>Subtraction:</h1>
+<form method='post', action="/results/">
+  {% csrf_token %}
+  {{form22}}
+  <button type="submit", name="save2", class="btn btn-success">Calculate!</button>
+</form>
+<h1>Multiplication:</h1>
+<form method='post', action="/results/">
+  {% csrf_token %}
+  {{form33}}
+  <button type="submit", name="save3", class="btn btn-success">Calculate!</button>
+</form>
+<h1>Division:</h1>
+<form method='post', action="/results/">
+  {% csrf_token %}
+  {{form44}}
+  <button type="submit", name="save4", class="btn btn-success">Calculate!</button>
+</form>
+
+{% endblock %}
